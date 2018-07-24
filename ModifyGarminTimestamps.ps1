@@ -18,6 +18,8 @@ $ts = New-TimeSpan -Start $LastGoodTime -End $FirstBadTime
 <#
 Get all the time nodes in the tcx file and if they are more advanced 
 #than the last good time, subtract the interval from it.
+
+Adding another comment for git testing purposes
 #>
 
 $xml.TrainingCenterDatabase.Activities.Activity.Lap.Track.Trackpoint.ChildNodes| where {$_.name -eq "Time"} |% {
